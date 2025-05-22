@@ -1,0 +1,157 @@
+/* Import the custom font */
+@font-face {
+    font-family: 'Akira';
+    src: url('../fonts/Akira Expanded Demo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to bottom, black, rgb(102, 0, 0), orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.square-account {
+    width: 800px; /* 50% of the parent container */
+    height: 600px; /* 50% of the parent container */
+    border-radius: 8px; /* Rounded corners */
+    display: flex;
+    flex-direction: row;
+    margin: 0; /* Reset margin to ensure it aligns */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Visible shadow */
+    position: absolute; /* Absolutely positioned */
+    top: 20px; /* Move slightly down */
+    left: 10px; /* Move slightly to the right */
+    overflow: hidden; /* Ensures no content overflow with rounded corners */
+    border: none; /* Removes visible border */
+}
+
+.square-StartPage {
+    width: 70vw;
+    height: 70vh;
+    margin-top: 160px;
+    border-radius: 8px; /* Rounded corners */
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Visible shadow */
+    position: relative;
+    overflow: hidden; /* Ensures no content overflow with rounded corners */
+    border: none; /* Removes visible border */
+}
+
+/* ............................................................................. */
+
+.square {
+    width: 70vw;
+    height: 70vh;
+    border-radius: 8px; /* Rounded corners */
+    display: flex;
+    flex-direction: row;
+    margin-top: 90px; /* Space between logo and square */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Visible shadow */
+    position: relative;
+    overflow: hidden; /* Ensures no content overflow with rounded corners */
+    border: none; /* Removes visible border */
+}
+
+.left-section, .right-section {
+    flex: 1; /* Ensures both sections take up equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2; /* Place content above the glossy effect */
+    padding: 0; /* No padding to avoid border appearance */
+}
+
+.left-section {
+    background-image: url('../resources/chessfall2.png');
+    background-size: cover;
+    background-position: center left 10%; /* Shift the image 10% to the right */
+    background-repeat: no-repeat;
+    border-radius: 8px 0 0 8px;
+    overflow: hidden;
+}
+
+.right-section {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes space between elements */
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    border-radius: 0 8px 8px 0; /* Rounded corners on the right */
+}
+
+.top-rectangle, .bottom-rectangle {
+    width: 90%; /* 90% of the container's width */
+    height: 60px; /* Adjust height as needed */
+    background-color: #d3d3d3; /* Light gray color */
+    border-radius: 12px; /* Rounded corners for the rectangles */
+    margin-bottom: 20px; /* Space between rectangles and text */
+}
+
+.bottom-rectangle {
+    margin-bottom: 0; /* No space after the bottom rectangle */
+}
+
+.welcome-title {
+    font-family: 'Akira', sans-serif; /* Apply the custom Akira font */
+    font-weight: bold;
+    font-size: 48px; /* Increased size for better visibility */
+    margin-top: 90px; /* Increased value to move the title further down */
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    color: black; /* Changed color to black */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* spacing between buttons */
+    margin-top: 20px;
+}
+
+.button-container button {
+    font-size: 24px;
+    padding: 20px 40px;
+    font-family: "Doomed";
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #aa0000;
+}
+
+.logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px; /* Adjust the value as needed */
+    height: auto;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+#gameCanvas {
+    bottom: 20px;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
